@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+
+    h1 {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    #chatContainer {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        height: 400px;
+    }
+
+    #printdata {
+        flex: 1;
+        padding: 10px;
+        overflow-y: auto;
+        border-bottom: 1px solid #ccc;
+    }
+
+    #inputContainer {
+        display: flex;
+        margin-top: 10px;
+    }
+
+
+    #messageInput {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+
+    #sendButton {
+        padding: 8px 16px;
+        margin-left: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    #sendButton:hover {
+        background-color: #0056b3;
+    }
+</style>
+
+<body>
+    <h1>Welcome to Chat</h1>
+    <div id="chatContainer">
+        <div id="printdata"></div>
+        <div id="inputContainer">
+
+            <input type="text" id="messageInput" placeholder="Type a message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <script src="/js/index.js"></script>
+</body>
+
+</html>
